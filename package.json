@@ -1,0 +1,38 @@
+{
+  "name": "atom-satisfy-dependencies",
+  "version": "0.0.0",
+  "description": "Provides a method that installs an Atom package's dependencies",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --pretty --project ./",
+    "dev": "tsc --watch --pretty --project ./",
+    "lint": "tslint --project ./",
+    "test": "npm run lint"
+  },
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idleberg/node-atom-satisfy-dependencies.git"
+  },
+  "keywords": [
+    "atom",
+    "atom package",
+    "dependency management"
+  ],
+  "dependencies": {
+    "atom-package-deps": "^5.1.0",
+    "atom-read-manifest": "^0.3.3"
+  },
+  "devDependencies": {
+    "@types/atom": "^1.36.1",
+    "@types/node": "^13.5.3",
+    "husky": "^4.2.1",
+    "tslint": "^6.0.0",
+    "typescript": "^3.7.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}

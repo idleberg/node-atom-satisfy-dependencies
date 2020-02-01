@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "inlineSourceMap": false,
+        "lib": [
+            "dom",
+            "es7"
+        ],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": false,
+        "outDir": "./lib",
+        "removeComments": false,
+        "rootDir": "src",
+        "sourceMap": true,
+        "target": "es5",
+        "incremental": true
+    },
+    "exclude": [
+        ".vscode-test",
+        "lib",
+        "node_modules"
+    ]
+}
