@@ -1,2 +1,2 @@
-declare const satisfyDependencies: (packageName: string, showPrompt?: boolean) => Promise<void>;
+declare function satisfyDependencies(packageName: string, userOptions?: PackageOptions): Promise<void>;
 export { satisfyDependencies };
