@@ -15,15 +15,31 @@ Provides a method that installs an Atom package's dependencies
 
 `satisfyDependencies(packageID: string, options: Object)`
 
-**Example**:
+**Examples**:
 
 ```js
-const { satisfyDependencies } = require('atom-satisfy-dependencies');
+// JavaScript
+import { satisfyDependencies } from 'atom-satisfy-dependencies';
 
 // Unique package identifier
 const packageID = 'teletype';
 
-satisfyDependencies(packageID);
+// Usage in Atom package's activation
+export async function activate() {
+  satisfyDependencies(packageID);
+};
+```
+
+```coffeescript
+# JavaScript
+{ satisfyDependencies } = require "atom-satisfy-dependencies"
+
+# Unique package identifier
+packageID = "teletype";
+
+module.exports =
+  activate: () ->
+    satisfyDependencies(packageID)
 ```
 
 ### Options
