@@ -31,7 +31,7 @@ export async function activate() {
 ```
 
 ```coffeescript
-# JavaScript
+# CoffeeScript
 { satisfyDependencies } = require "atom-satisfy-dependencies"
 
 # Unique package identifier
