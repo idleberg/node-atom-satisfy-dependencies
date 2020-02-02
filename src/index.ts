@@ -10,12 +10,12 @@ const defaultOptions: PackageOptions = {
 
 /**
  * Installs and optionally enables package dependencies
- * @param {string} packageName
+ * @param {string} identifier
  * @param {Object} options
  */
-async function satisfyDependencies(packageName: string, userOptions: PackageOptions = {}): Promise<void> {
+async function satisfyDependencies(identifier: string, userOptions: PackageOptions = {}): Promise<void> {
   const options: PackageOptions = {...defaultOptions, ...userOptions};
-  const manifest: any = await readManifest(packageName);
+  const manifest: any = await readManifest(identifier);
 
   installDependencies(manifest.name, options.showPrompt);
   enableDependencies(manifest['package-deps'], options);
@@ -26,7 +26,7 @@ async function satisfyDependencies(packageName: string, userOptions: PackageOpti
  * @param {Object} manifest
  * @param {Object} options
  */
-function enableDependencies(manifest, options) {
+function enableDependencies(manifest, options: PackageOptions) {
   if (options.enableDependencies) {
     manifest['package-deps'].forEach(packageDependency => {
       if (atom.packages.isPackageDisabled(packageDependency)) {
@@ -40,6 +40,4 @@ function enableDependencies(manifest, options) {
   }
 }
 
-export {
-  satisfyDependencies
-};
+export default satisfyDependencies;

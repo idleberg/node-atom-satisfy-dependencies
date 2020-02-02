@@ -1,7 +1,7 @@
 /**
  * Installs and optionally enables package dependencies
- * @param {string} packageName
+ * @param {string} identifier
  * @param {Object} options
  */
-declare function satisfyDependencies(packageName: string, userOptions?: PackageOptions): Promise<void>;
-export { satisfyDependencies };
+declare function satisfyDependencies(identifier: string, userOptions?: PackageOptions): Promise<void>;
+export default satisfyDependencies;
