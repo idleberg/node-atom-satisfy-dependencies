@@ -37,6 +37,7 @@ export async function activate() {
 # Unique package identifier
 packageID = "teletype";
 
+# Usage in Atom package's activation
 module.exports =
   activate: () ->
     satisfyDependencies(packageID)
