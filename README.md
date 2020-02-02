@@ -13,7 +13,7 @@ Provides a method that installs an Atom package's dependencies
 
 ## Usage
 
-`satisfyDependencies(packageID: string, showPrompt?: boolean)`
+`satisfyDependencies(packageID: string, options: Object)`
 
 **Example**:
 
@@ -25,6 +25,20 @@ const packageID = 'teletype';
 
 satisfyDependencies(packageID);
 ```
+
+### Options
+
+#### logger
+
+Type: `Function`
+
+Debug logger function, defaults to `console.log`. Logging support is limited to `atom.inDevMode()`
+
+#### showPrompt
+
+Type: `boolean`
+
+Specifies whether to show an [install prompt](https://www.npmjs.com/package/atom-package-deps#api) prior to satisfying dependencies
 
 ## License
 
