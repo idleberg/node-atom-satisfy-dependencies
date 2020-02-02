@@ -18,7 +18,7 @@ Provides a method that installs an Atom package's dependencies
 **Example**:
 
 ```js
-const { satisfyDependencies, satisfyDependenciesSync } = require('atom-satisfy-dependencies');
+const { satisfyDependencies } = require('atom-satisfy-dependencies');
 
 // Unique package identifier
 const packageID = 'teletype';
