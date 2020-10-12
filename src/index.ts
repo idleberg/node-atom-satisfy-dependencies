@@ -14,10 +14,14 @@ const defaultOptions: SatisfyDependenciesOptions = {
  * @param {Object} options
  */
 async function satisfyDependencies(identifier: string, userOptions: SatisfyDependenciesOptions = {}): Promise<void> {
-  const options: SatisfyDependenciesOptions = {...defaultOptions, ...userOptions};
+  const options: SatisfyDependenciesOptions = {
+    ...defaultOptions,
+    ...userOptions
+  };
+
   const manifest: any = await readManifest(identifier);
 
-  installDependencies(manifest['name'], options.showPrompt);
+  await installDependencies(manifest['name'], options.showPrompt);
   enableDependencies(manifest['package-deps'], options);
 }
 
@@ -40,4 +44,6 @@ function enableDependencies(manifest, options: SatisfyDependenciesOptions) {
   }
 }
 
-export default satisfyDependencies;
+export {
+  satisfyDependencies
+};

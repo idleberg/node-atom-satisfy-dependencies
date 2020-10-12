@@ -4,4 +4,4 @@
  * @param {Object} options
  */
 declare function satisfyDependencies(identifier: string, userOptions?: SatisfyDependenciesOptions): Promise<void>;
-export default satisfyDependencies;
+export { satisfyDependencies };
