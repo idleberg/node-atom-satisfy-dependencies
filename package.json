@@ -1,6 +1,6 @@
 {
   "name": "atom-satisfy-dependencies",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Provides a method that installs an Atom package's dependencies",
   "license": "MIT",
   "scripts": {
