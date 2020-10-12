@@ -4,8 +4,7 @@ import { install as installDependencies } from 'atom-package-deps';
 import { readManifest } from 'atom-read-manifest';
 
 const defaultOptions: SatisfyDependenciesOptions = {
-  logger: console.log,
-  showPrompt: true
+  logger: console.log
 };
 
 /**
@@ -21,7 +20,7 @@ async function satisfyDependencies(identifier: string, userOptions: SatisfyDepen
 
   const manifest: any = await readManifest(identifier);
 
-  await installDependencies(manifest['name'], options.showPrompt);
+  await installDependencies(manifest['name']);
   enableDependencies(manifest['package-deps'], options);
 }
 

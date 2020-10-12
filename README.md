@@ -51,12 +51,6 @@ Type: `Function`
 
 Debug logger function, defaults to `console.log`. Logging support is limited to `atom.inDevMode()`
 
-#### showPrompt
-
-Type: `boolean`
-
-Specifies whether to show an [install prompt](https://www.npmjs.com/package/atom-package-deps#api) prior to satisfying dependencies
-
 ## License
 
 This work is licensed under [The MIT License](https://opensource.org/licenses/MIT)
